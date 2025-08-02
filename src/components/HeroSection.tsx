@@ -28,12 +28,12 @@ const HeroSection = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight"
             >
-              <span className="text-neon-primary">🎮</span>{' '}
+              <span className="text-neon-primary">🚀</span>{' '}
               <span className="bg-gradient-hero bg-clip-text text-transparent animate-glow">
-                Enter the Future
+                Welcome to
               </span>
               <br />
-              <span className="text-neon-secondary">of Gaming</span>
+              <span className="text-neon-secondary">Rovarah</span>
             </motion.h1>
 
             <motion.p
@@ -42,9 +42,9 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl text-muted-foreground max-w-2xl"
             >
-              AI + 3D worlds. Built for gamers, by gamers.
+              The future of AI-powered gaming. Professional-grade 3D experiences.
               <br />
-              <span className="text-neon-accent">Experience the next level of interactive entertainment.</span>
+              <span className="text-neon-accent">Where artificial intelligence meets immersive entertainment.</span>
             </motion.p>
 
             <motion.div
@@ -105,7 +105,7 @@ const HeroSection = () => {
                   }}
                   className="w-32 h-32 md:w-48 md:h-48 bg-gradient-hero rounded-full flex items-center justify-center text-6xl md:text-8xl animate-float"
                 >
-                  🥚
+                  🎮
                 </motion.div>
               </div>
               

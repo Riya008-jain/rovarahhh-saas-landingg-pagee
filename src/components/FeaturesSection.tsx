@@ -66,10 +66,10 @@ const FeaturesSection = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-neon-primary">Features</span> That{' '}
-            <span className="text-neon-accent">Level Up</span> Your Game
+            <span className="text-neon-accent">Revolutionize</span> Gaming
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            🥚 Watch as each feature cracks open to reveal the power within
+            ⚡ Discover the cutting-edge technology that powers Rovarah
           </p>
         </motion.div>
 
@@ -87,7 +87,7 @@ const FeaturesSection = () => {
                 {/* Egg Shell */}
                 <motion.div
                   className={`card-gaming p-6 h-full relative overflow-hidden ${
-                    crackedFeatures.includes(index) ? 'egg-crack cracked' : 'egg-crack'
+                    crackedFeatures.includes(index) ? 'feature-reveal revealed' : 'feature-reveal'
                   }`}
                   animate={crackedFeatures.includes(index) ? {
                     background: [
@@ -98,17 +98,17 @@ const FeaturesSection = () => {
                   } : {}}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
-                  {/* Crack Animation Overlay */}
+                  {/* Feature Reveal Overlay */}
                   {crackedFeatures.includes(index) && (
                     <motion.div
                       initial={{ scale: 0, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
                       className="absolute inset-0 pointer-events-none"
                     >
-                      {/* Crack lines */}
-                      <div className="absolute top-1/4 left-1/2 w-px h-1/2 bg-accent transform -translate-x-1/2 rotate-12" />
-                      <div className="absolute top-1/3 left-1/3 w-px h-1/3 bg-accent transform rotate-45" />
-                      <div className="absolute top-1/2 right-1/3 w-px h-1/4 bg-accent transform -rotate-30" />
+                      {/* Energy lines */}
+                      <div className="absolute top-1/4 left-1/2 w-px h-1/2 bg-accent transform -translate-x-1/2 rotate-12 animate-pulse" />
+                      <div className="absolute top-1/3 left-1/3 w-px h-1/3 bg-primary transform rotate-45 animate-pulse" />
+                      <div className="absolute top-1/2 right-1/3 w-px h-1/4 bg-secondary transform -rotate-30 animate-pulse" />
                     </motion.div>
                   )}
 
@@ -164,7 +164,7 @@ const FeaturesSection = () => {
           className="mt-12 text-center"
         >
           <div className="inline-flex items-center gap-2 bg-card/50 backdrop-blur-sm rounded-full px-6 py-3 border border-border/20">
-            <span className="text-sm text-muted-foreground">Features Unlocked:</span>
+            <span className="text-sm text-muted-foreground">Features Discovered:</span>
             <span className="text-accent font-bold">{crackedFeatures.length}/{features.length}</span>
             <div className="flex gap-1">
               {features.map((_, index) => (
