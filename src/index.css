@@ -8,51 +8,51 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Gaming Dark Theme Colors */
-    --background: 220 13% 8%;
+    /* Classy Blue, Black, Red Theme */
+    --background: 220 25% 5%;
     --foreground: 210 40% 98%;
 
-    --card: 220 13% 10%;
+    --card: 220 25% 8%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 220 13% 10%;
+    --popover: 220 25% 8%;
     --popover-foreground: 210 40% 98%;
 
-    /* Professional Neon Purple Primary */
-    --primary: 271 81% 56%;
-    --primary-foreground: 210 40% 98%;
-    --primary-glow: 271 81% 66%;
+    /* Classy Blue Primary */
+    --primary: 217 91% 60%;
+    --primary-foreground: 220 25% 5%;
+    --primary-glow: 217 91% 70%;
 
-    /* Professional Neon Blue Secondary */
-    --secondary: 217 91% 60%;
+    /* Deep Red Secondary */
+    --secondary: 0 84% 60%;
     --secondary-foreground: 210 40% 98%;
-    --secondary-glow: 217 91% 70%;
+    --secondary-glow: 0 84% 70%;
 
-    /* Professional Emerald Green Accent */
-    --accent: 158 64% 52%;
+    /* Rich Black Accent */
+    --accent: 220 25% 15%;
     --accent-foreground: 210 40% 98%;
-    --accent-glow: 158 64% 62%;
+    --accent-glow: 220 25% 25%;
 
-    --muted: 220 13% 15%;
+    --muted: 220 15% 18%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 13% 20%;
-    --input: 220 13% 15%;
-    --ring: 271 76% 53%;
+    --border: 220 15% 22%;
+    --input: 220 15% 18%;
+    --ring: 217 91% 60%;
 
     --radius: 0.75rem;
 
-    /* Gaming Gradients */
+    /* Classy Blue, Black, Red Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-glow)));
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)));
-    --gradient-dark: linear-gradient(180deg, hsl(220 13% 8%), hsl(220 13% 6%));
+    --gradient-dark: linear-gradient(180deg, hsl(220 25% 5%), hsl(220 25% 3%));
     
-    /* Gaming Shadows & Glows */
+    /* Classy Shadows & Glows */
     --shadow-primary: 0 0 20px hsl(var(--primary) / 0.3);
     --shadow-secondary: 0 0 20px hsl(var(--secondary) / 0.3);
     --shadow-accent: 0 0 20px hsl(var(--accent) / 0.3);
@@ -66,26 +66,26 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Same values for dark mode consistency */
-    --background: 220 13% 8%;
+    /* Same values for dark mode consistency - Classy Blue, Black, Red */
+    --background: 220 25% 5%;
     --foreground: 210 40% 98%;
-    --card: 220 13% 10%;
+    --card: 220 25% 8%;
     --card-foreground: 210 40% 98%;
-    --popover: 220 13% 10%;
+    --popover: 220 25% 8%;
     --popover-foreground: 210 40% 98%;
-    --primary: 271 76% 53%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 217 91% 60%;
-    --secondary-foreground: 220 13% 8%;
-    --muted: 220 13% 15%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 220 25% 5%;
+    --secondary: 0 84% 60%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 15% 18%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 142 76% 36%;
+    --accent: 220 25% 15%;
     --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
-    --border: 220 13% 20%;
-    --input: 220 13% 15%;
-    --ring: 271 76% 53%;
+    --border: 220 15% 22%;
+    --input: 220 15% 18%;
+    --ring: 217 91% 60%;
   }
 }
 
@@ -119,7 +119,7 @@ All colors MUST be HSL.
     @apply hover:scale-105 hover:shadow-[var(--glow-accent)] active:scale-95;
   }
 
-  /* Neon Text Effects */
+  /* Neon Text Effects - Blue, Black, Red */
   .text-neon-primary {
     @apply text-primary;
     text-shadow: 0 0 10px hsl(var(--primary) / 0.8);
@@ -150,9 +150,9 @@ All colors MUST be HSL.
   .parallax-stars {
     @apply absolute inset-0 bg-repeat opacity-30;
     background-image: radial-gradient(2px 2px at 20px 30px, #ffffff, transparent),
-                      radial-gradient(2px 2px at 40px 70px, hsl(var(--primary)), transparent),
-                      radial-gradient(1px 1px at 90px 40px, hsl(var(--secondary)), transparent),
-                      radial-gradient(1px 1px at 130px 80px, hsl(var(--accent)), transparent),
+                      radial-gradient(2px 2px at 40px 70px, hsl(217 91% 60%), transparent),
+                      radial-gradient(1px 1px at 90px 40px, hsl(0 84% 60%), transparent),
+                      radial-gradient(1px 1px at 130px 80px, hsl(220 25% 15%), transparent),
                       radial-gradient(2px 2px at 160px 30px, #ffffff, transparent);
     background-size: 200px 100px;
   }
