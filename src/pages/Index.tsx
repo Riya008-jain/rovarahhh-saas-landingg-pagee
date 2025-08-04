@@ -10,6 +10,7 @@ import FAQSection from '../components/FAQSection';
 import CommunitySection from '../components/CommunitySection';
 import CTASection from '../components/CTASection';
 import MusicToggle from '../components/MusicToggle';
+import AIAssistant from '../components/AIAssistant';
 
 const Index = () => {
   return (
@@ -22,6 +23,9 @@ const Index = () => {
       
       {/* Music Toggle */}
       <MusicToggle />
+      
+      {/* AI Assistant */}
+      <AIAssistant />
       
       {/* Main Content */}
       <motion.main
