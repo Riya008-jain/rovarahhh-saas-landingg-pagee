@@ -126,7 +126,11 @@ export default {
 				'slide-up': 'slide-up 0.6s ease-out',
 				'slide-down': 'slide-down 0.6s ease-out',
 				'spin-slow': 'spin-slow 20s linear infinite',
-				'crack': 'crack 1s ease-in-out forwards'
+				'crack': 'crack 1s ease-in-out forwards',
+				'crazy-bounce': 'crazy-bounce 4s ease-in-out infinite',
+				'float-stars': 'float-stars 20s linear infinite',
+				'lightning-flash': 'lightning-flash 3s ease-in-out infinite',
+				'pulse-text': 'pulse-text 2s ease-in-out infinite'
 			}
 		}
 	},

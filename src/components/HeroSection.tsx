@@ -23,17 +23,38 @@ const HeroSection = () => {
           {/* Left Column - Text Content */}
           <div className="space-y-8">
             <motion.h1
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              initial={{ opacity: 0, y: 50, rotateX: 90 }}
+              animate={{ opacity: 1, y: 0, rotateX: 0 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
               className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight"
             >
-              <span className="text-neon-primary">🚀</span>{' '}
-              <span className="bg-gradient-hero bg-clip-text text-transparent animate-glow">
+              <motion.span 
+                className="text-neon-primary text-6xl md:text-8xl"
+                animate={{ 
+                  rotate: [0, 10, -10, 0],
+                  scale: [1, 1.1, 1]
+                }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                🚀
+              </motion.span>{' '}
+              <span className="bg-gradient-hero bg-clip-text text-transparent animate-pulse-text">
                 Welcome to
               </span>
               <br />
-              <span className="text-neon-secondary">Rovarah</span>
+              <motion.span 
+                className="text-neon-secondary"
+                animate={{ 
+                  textShadow: [
+                    "0 0 20px rgb(255 0 0 / 0.8)",
+                    "0 0 40px rgb(255 0 0 / 1)",
+                    "0 0 20px rgb(255 0 0 / 0.8)"
+                  ]
+                }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                Rovarah
+              </motion.span>
             </motion.h1>
 
             <motion.p
@@ -90,23 +111,61 @@ const HeroSection = () => {
             transition={{ duration: 1, delay: 0.6 }}
             className="relative h-96 md:h-[500px] lg:h-[600px]"
           >
-            <div className="absolute inset-0 bg-gradient-primary rounded-2xl opacity-20 blur-3xl animate-pulse-neon" />
-            <div className="relative h-full rounded-2xl overflow-hidden">
-              {/* Spline 3D Model - Fallback with placeholder */}
-              <div className="w-full h-full flex items-center justify-center bg-card/20 backdrop-blur-sm rounded-2xl border border-primary/30">
+            <div className="absolute inset-0 bg-gradient-primary rounded-2xl opacity-30 blur-3xl animate-pulse-neon" />
+            <div className="relative h-full rounded-2xl overflow-hidden border-2 border-primary/50">
+              {/* Crazy Gaming 3D Model */}
+              <div className="w-full h-full flex items-center justify-center bg-card/20 backdrop-blur-sm rounded-2xl border border-primary/30 relative overflow-hidden">
                 <motion.div
                   animate={{ 
                     rotateY: [0, 360],
-                    scale: [1, 1.1, 1]
+                    rotateX: [0, 15, -15, 0],
+                    scale: [1, 1.2, 0.9, 1.1, 1]
                   }}
                   transition={{ 
-                    rotateY: { duration: 10, repeat: Infinity, ease: "linear" },
-                    scale: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+                    rotateY: { duration: 8, repeat: Infinity, ease: "linear" },
+                    rotateX: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+                    scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
                   }}
-                  className="w-32 h-32 md:w-48 md:h-48 bg-gradient-hero rounded-full flex items-center justify-center text-6xl md:text-8xl animate-float"
+                  className="w-32 h-32 md:w-48 md:h-48 bg-gradient-hero rounded-full flex items-center justify-center text-6xl md:text-8xl animate-crazy-bounce relative"
+                  style={{ transformStyle: 'preserve-3d' }}
                 >
-                  🎮
+                  <motion.div
+                    animate={{
+                      filter: [
+                        "drop-shadow(0 0 20px rgb(0 100 255))",
+                        "drop-shadow(0 0 40px rgb(255 0 0))",
+                        "drop-shadow(0 0 30px rgb(0 100 255))"
+                      ]
+                    }}
+                    transition={{ duration: 3, repeat: Infinity }}
+                  >
+                    🎮
+                  </motion.div>
                 </motion.div>
+                
+                {/* Floating particles */}
+                <div className="absolute inset-0 pointer-events-none">
+                  {[...Array(8)].map((_, i) => (
+                    <motion.div
+                      key={i}
+                      className="absolute w-2 h-2 bg-primary rounded-full"
+                      style={{
+                        left: `${20 + i * 10}%`,
+                        top: `${30 + i * 5}%`,
+                      }}
+                      animate={{
+                        y: [-20, 20, -20],
+                        opacity: [0.3, 1, 0.3],
+                        scale: [0.5, 1.5, 0.5]
+                      }}
+                      transition={{
+                        duration: 3 + i * 0.5,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    />
+                  ))}
+                </div>
               </div>
               
               {/* Uncomment below to use actual Spline model */}

@@ -8,84 +8,84 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Classy Blue, Black, Red Theme */
-    --background: 220 25% 5%;
+    /* Crazy Gaming Blue, Black, Red Theme */
+    --background: 210 25% 2%;
     --foreground: 210 40% 98%;
 
-    --card: 220 25% 8%;
+    --card: 210 25% 6%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 220 25% 8%;
+    --popover: 210 25% 6%;
     --popover-foreground: 210 40% 98%;
 
-    /* Classy Blue Primary */
-    --primary: 217 91% 60%;
-    --primary-foreground: 220 25% 5%;
-    --primary-glow: 217 91% 70%;
+    /* Electric Blue Primary */
+    --primary: 210 100% 65%;
+    --primary-foreground: 210 25% 2%;
+    --primary-glow: 210 100% 75%;
 
-    /* Deep Red Secondary */
-    --secondary: 0 84% 60%;
+    /* Blood Red Secondary */
+    --secondary: 0 100% 55%;
     --secondary-foreground: 210 40% 98%;
-    --secondary-glow: 0 84% 70%;
+    --secondary-glow: 0 100% 65%;
 
-    /* Rich Black Accent */
-    --accent: 220 25% 15%;
-    --accent-foreground: 210 40% 98%;
-    --accent-glow: 220 25% 25%;
+    /* Deep Black Accent with Blue Tint */
+    --accent: 210 50% 8%;
+    --accent-foreground: 210 100% 75%;
+    --accent-glow: 210 50% 18%;
 
-    --muted: 220 15% 18%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 15% 12%;
+    --muted-foreground: 215 20.2% 70%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 100% 55%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 22%;
-    --input: 220 15% 18%;
-    --ring: 217 91% 60%;
+    --border: 210 30% 15%;
+    --input: 210 15% 12%;
+    --ring: 210 100% 65%;
 
     --radius: 0.75rem;
 
-    /* Classy Blue, Black, Red Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-glow)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)));
-    --gradient-dark: linear-gradient(180deg, hsl(220 25% 5%), hsl(220 25% 3%));
+    /* Crazy Gaming Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 65%), hsl(220 100% 75%), hsl(210 100% 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(0 100% 55%), hsl(10 100% 65%), hsl(350 100% 50%));
+    --gradient-accent: linear-gradient(135deg, hsl(210 50% 8%), hsl(220 60% 15%), hsl(210 40% 5%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 65%), hsl(0 100% 55%), hsl(210 50% 8%), hsl(220 100% 75%));
+    --gradient-dark: linear-gradient(180deg, hsl(210 25% 2%), hsl(210 30% 1%));
     
-    /* Classy Shadows & Glows */
-    --shadow-primary: 0 0 20px hsl(var(--primary) / 0.3);
-    --shadow-secondary: 0 0 20px hsl(var(--secondary) / 0.3);
-    --shadow-accent: 0 0 20px hsl(var(--accent) / 0.3);
-    --glow-primary: 0 0 40px hsl(var(--primary) / 0.5);
-    --glow-secondary: 0 0 40px hsl(var(--secondary) / 0.5);
-    --glow-accent: 0 0 40px hsl(var(--accent) / 0.5);
+    /* Crazy Intensive Glows */
+    --shadow-primary: 0 0 30px hsl(210 100% 65% / 0.6);
+    --shadow-secondary: 0 0 30px hsl(0 100% 55% / 0.6);
+    --shadow-accent: 0 0 30px hsl(210 50% 8% / 0.4);
+    --glow-primary: 0 0 60px hsl(210 100% 65% / 0.8), 0 0 100px hsl(210 100% 75% / 0.4);
+    --glow-secondary: 0 0 60px hsl(0 100% 55% / 0.8), 0 0 100px hsl(0 100% 65% / 0.4);
+    --glow-accent: 0 0 60px hsl(210 100% 75% / 0.6), 0 0 100px hsl(210 100% 65% / 0.3);
 
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Crazy Animations */
+    --transition-crazy: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-elastic: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   .dark {
-    /* Same values for dark mode consistency - Classy Blue, Black, Red */
-    --background: 220 25% 5%;
+    /* Crazy Gaming Dark Mode */
+    --background: 210 25% 2%;
     --foreground: 210 40% 98%;
-    --card: 220 25% 8%;
+    --card: 210 25% 6%;
     --card-foreground: 210 40% 98%;
-    --popover: 220 25% 8%;
+    --popover: 210 25% 6%;
     --popover-foreground: 210 40% 98%;
-    --primary: 217 91% 60%;
-    --primary-foreground: 220 25% 5%;
-    --secondary: 0 84% 60%;
+    --primary: 210 100% 65%;
+    --primary-foreground: 210 25% 2%;
+    --secondary: 0 100% 55%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 220 15% 18%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 220 25% 15%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 84% 60%;
+    --muted: 210 15% 12%;
+    --muted-foreground: 215 20.2% 70%;
+    --accent: 210 50% 8%;
+    --accent-foreground: 210 100% 75%;
+    --destructive: 0 100% 55%;
     --destructive-foreground: 210 40% 98%;
-    --border: 220 15% 22%;
-    --input: 220 15% 18%;
-    --ring: 217 91% 60%;
+    --border: 210 30% 15%;
+    --input: 210 15% 12%;
+    --ring: 210 100% 65%;
   }
 }
 
@@ -100,46 +100,60 @@ All colors MUST be HSL.
 }
 
 @layer components {
-  /* Gaming Button Variants */
+  /* Crazy Gaming Button Variants */
   .btn-gaming {
-    @apply relative overflow-hidden rounded-lg px-6 py-3 font-semibold transition-all duration-300;
-    @apply bg-gradient-to-r from-primary to-primary-glow text-primary-foreground;
-    @apply hover:scale-105 hover:shadow-[var(--glow-primary)] active:scale-95;
+    @apply relative overflow-hidden rounded-lg px-6 py-3 font-bold transition-all duration-500;
+    @apply bg-gradient-to-r from-primary via-primary-glow to-primary text-primary-foreground;
+    @apply hover:scale-110 hover:rotate-2 hover:shadow-[var(--glow-primary)] active:scale-95 active:rotate-0;
+    @apply before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent;
+    @apply before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-700;
+    transform-style: preserve-3d;
   }
 
   .btn-gaming-secondary {
-    @apply relative overflow-hidden rounded-lg px-6 py-3 font-semibold transition-all duration-300;
-    @apply bg-gradient-to-r from-secondary to-secondary-glow text-secondary-foreground;
-    @apply hover:scale-105 hover:shadow-[var(--glow-secondary)] active:scale-95;
+    @apply relative overflow-hidden rounded-lg px-6 py-3 font-bold transition-all duration-500;
+    @apply bg-gradient-to-r from-secondary via-secondary-glow to-secondary text-secondary-foreground;
+    @apply hover:scale-110 hover:rotate-[-2deg] hover:shadow-[var(--glow-secondary)] active:scale-95 active:rotate-0;
+    @apply before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent;
+    @apply before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-700;
   }
 
   .btn-gaming-accent {
-    @apply relative overflow-hidden rounded-lg px-6 py-3 font-semibold transition-all duration-300;
-    @apply bg-gradient-to-r from-accent to-accent-glow text-accent-foreground;
-    @apply hover:scale-105 hover:shadow-[var(--glow-accent)] active:scale-95;
+    @apply relative overflow-hidden rounded-lg px-6 py-3 font-bold transition-all duration-500;
+    @apply bg-gradient-to-r from-accent via-accent-glow to-accent text-accent-foreground;
+    @apply hover:scale-110 hover:rotate-1 hover:shadow-[var(--glow-accent)] active:scale-95 active:rotate-0;
+    @apply before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-primary/30 before:to-transparent;
+    @apply before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-700;
   }
 
-  /* Neon Text Effects - Blue, Black, Red */
+  /* Crazy Neon Text Effects */
   .text-neon-primary {
     @apply text-primary;
-    text-shadow: 0 0 10px hsl(var(--primary) / 0.8);
+    text-shadow: 0 0 10px hsl(var(--primary) / 1), 0 0 20px hsl(var(--primary) / 0.8), 0 0 30px hsl(var(--primary) / 0.6);
+    animation: pulse-text 2s ease-in-out infinite;
   }
 
   .text-neon-secondary {
     @apply text-secondary;
-    text-shadow: 0 0 10px hsl(var(--secondary) / 0.8);
+    text-shadow: 0 0 10px hsl(var(--secondary) / 1), 0 0 20px hsl(var(--secondary) / 0.8), 0 0 30px hsl(var(--secondary) / 0.6);
+    animation: pulse-text 2.5s ease-in-out infinite;
   }
 
   .text-neon-accent {
-    @apply text-accent;
-    text-shadow: 0 0 10px hsl(var(--accent) / 0.8);
+    @apply text-accent-foreground;
+    text-shadow: 0 0 10px hsl(210 100% 75% / 1), 0 0 20px hsl(210 100% 65% / 0.8), 0 0 30px hsl(210 100% 55% / 0.6);
+    animation: pulse-text 3s ease-in-out infinite;
   }
 
-  /* Gaming Cards */
+  /* Crazy Gaming Cards */
   .card-gaming {
-    @apply rounded-xl border border-border/20 bg-card/50 backdrop-blur-sm;
-    @apply shadow-lg hover:shadow-[var(--shadow-primary)] transition-all duration-300;
-    @apply hover:scale-105 hover:border-primary/30;
+    @apply rounded-xl border-2 border-primary/30 bg-card/60 backdrop-blur-xl;
+    @apply shadow-xl hover:shadow-[var(--glow-primary)] transition-all duration-500;
+    @apply hover:scale-105 hover:rotate-1 hover:border-primary/60;
+    @apply relative before:absolute before:inset-0 before:rounded-xl;
+    @apply before:bg-gradient-to-br before:from-primary/10 before:via-transparent before:to-secondary/10;
+    @apply before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-500;
+    transform-style: preserve-3d;
   }
 
   /* Parallax Container */
@@ -148,13 +162,14 @@ All colors MUST be HSL.
   }
 
   .parallax-stars {
-    @apply absolute inset-0 bg-repeat opacity-30;
-    background-image: radial-gradient(2px 2px at 20px 30px, #ffffff, transparent),
-                      radial-gradient(2px 2px at 40px 70px, hsl(217 91% 60%), transparent),
-                      radial-gradient(1px 1px at 90px 40px, hsl(0 84% 60%), transparent),
-                      radial-gradient(1px 1px at 130px 80px, hsl(220 25% 15%), transparent),
-                      radial-gradient(2px 2px at 160px 30px, #ffffff, transparent);
+    @apply absolute inset-0 bg-repeat opacity-40;
+    background-image: radial-gradient(3px 3px at 20px 30px, hsl(210 100% 75%), transparent),
+                      radial-gradient(2px 2px at 40px 70px, hsl(210 100% 65%), transparent),
+                      radial-gradient(1px 1px at 90px 40px, hsl(0 100% 55%), transparent),
+                      radial-gradient(2px 2px at 130px 80px, hsl(210 100% 85%), transparent),
+                      radial-gradient(1px 1px at 160px 30px, hsl(0 100% 65%), transparent);
     background-size: 200px 100px;
+    animation: float-stars 20s linear infinite;
   }
 
   /* Feature Reveal Animation */
@@ -170,12 +185,36 @@ All colors MUST be HSL.
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, transparent 45%, hsl(var(--accent)) 45%, hsl(var(--accent)) 55%, transparent 55%);
+    background: linear-gradient(45deg, transparent 30%, hsl(210 100% 65% / 0.8) 45%, hsl(0 100% 55% / 0.8) 55%, transparent 70%);
     opacity: 0;
     transition: opacity 0.5s ease;
+    animation: lightning-flash 3s ease-in-out infinite;
   }
 
   .feature-reveal.revealed::before {
-    opacity: 0.3;
+    opacity: 0.6;
+  }
+
+  /* Crazy Gaming Keyframes */
+  @keyframes pulse-text {
+    0%, 100% { filter: brightness(1) drop-shadow(0 0 10px currentColor); }
+    50% { filter: brightness(1.3) drop-shadow(0 0 20px currentColor); }
+  }
+
+  @keyframes float-stars {
+    0% { transform: translateX(0px); }
+    100% { transform: translateX(-200px); }
+  }
+
+  @keyframes lightning-flash {
+    0%, 90%, 100% { opacity: 0; }
+    5%, 15% { opacity: 0.8; }
+  }
+
+  @keyframes crazy-bounce {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-20px) rotate(5deg); }
+    50% { transform: translateY(-10px) rotate(-3deg); }
+    75% { transform: translateY(-15px) rotate(2deg); }
   }
 }
