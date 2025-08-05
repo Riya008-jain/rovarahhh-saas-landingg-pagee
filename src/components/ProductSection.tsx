@@ -29,7 +29,7 @@ const ProductSection = () => {
   ];
 
   return (
-    <section id="product" ref={ref} className="py-20 relative">
+    <section id="about" ref={ref} className="py-20 relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -38,8 +38,8 @@ const ProductSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-neon-primary">Product</span> That{' '}
-            <span className="text-neon-accent">Redefines</span> Gaming
+            <span className="text-neon-primary">About</span> The{' '}
+            <span className="text-neon-accent">Future</span> of Gaming
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Rovarah combines AI intelligence with cutting-edge 3D technology to create 

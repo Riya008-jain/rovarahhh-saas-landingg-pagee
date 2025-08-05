@@ -56,7 +56,7 @@ const FeaturesSection = () => {
   }, [isInView, features.length]);
 
   return (
-    <section ref={ref} className="py-20 relative">
+    <section id="features" ref={ref} className="py-20 relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

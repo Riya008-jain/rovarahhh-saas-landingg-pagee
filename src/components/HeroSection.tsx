@@ -16,7 +16,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Hero Content */}
       <div className="container mx-auto px-4 z-10 relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -38,7 +38,7 @@ const HeroSection = () => {
               >
                 🚀
               </motion.span>{' '}
-              <span className="bg-gradient-hero bg-clip-text text-transparent animate-pulse-text">
+              <span className="text-white text-4xl md:text-6xl font-bold drop-shadow-lg">
                 Welcome to
               </span>
               <br />

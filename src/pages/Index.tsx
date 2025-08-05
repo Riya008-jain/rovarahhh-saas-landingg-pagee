@@ -1,16 +1,19 @@
 import { motion } from 'framer-motion';
-import ParallaxBackground from '../components/ParallaxBackground';
-import Navbar from '../components/Navbar';
-import HeroSection from '../components/HeroSection';
-import ProductSection from '../components/ProductSection';
-import FeaturesSection from '../components/FeaturesSection';
-import EmailSection from '../components/EmailSection';
-import PricingSection from '../components/PricingSection';
-import FAQSection from '../components/FAQSection';
-import CommunitySection from '../components/CommunitySection';
-import CTASection from '../components/CTASection';
-import MusicToggle from '../components/MusicToggle';
-import AIAssistant from '../components/AIAssistant';
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import ProductSection from "@/components/ProductSection";
+import WhatWeOfferSection from "@/components/WhatWeOfferSection";
+import FeaturesSection from "@/components/FeaturesSection";
+import EmailSection from "@/components/EmailSection";
+import PricingSection from "@/components/PricingSection";
+import FAQSection from "@/components/FAQSection";
+import CommunitySection from "@/components/CommunitySection";
+import CTASection from "@/components/CTASection";
+import ParallaxBackground from "@/components/ParallaxBackground";
+import MusicToggle from "@/components/MusicToggle";
+import AIAssistant from "@/components/AIAssistant";
+import CustomCursor from "@/components/CustomCursor";
+import SoundToggle from "@/components/SoundToggle";
 
 const Index = () => {
   return (
@@ -18,31 +21,23 @@ const Index = () => {
       {/* Parallax Background */}
       <ParallaxBackground />
       
-      {/* Navigation */}
-      <Navbar />
-      
-      {/* Music Toggle */}
-      <MusicToggle />
-      
-      {/* AI Assistant */}
-      <AIAssistant />
-      
-      {/* Main Content */}
-      <motion.main
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="relative z-10 pt-20"
-      >
+      <div className="relative z-10">
+        <Navbar />
         <HeroSection />
         <ProductSection />
+        <WhatWeOfferSection />
         <FeaturesSection />
         <EmailSection />
         <PricingSection />
         <FAQSection />
         <CommunitySection />
         <CTASection />
-      </motion.main>
+      </div>
+
+      <MusicToggle />
+      <SoundToggle />
+      <AIAssistant />
+      <CustomCursor />
       
       {/* Footer */}
       <footer className="relative z-10 py-12 border-t border-border/20">

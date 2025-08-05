@@ -33,30 +33,56 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link 
-              to="/#product" 
-              className="text-foreground hover:text-neon-primary transition-colors"
+            <a 
+              href="#home" 
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-foreground hover:text-neon-primary transition-colors cursor-pointer"
             >
-              Product
-            </Link>
-            <Link 
-              to="/#pricing" 
-              className="text-foreground hover:text-neon-secondary transition-colors"
+              Home
+            </a>
+            <a 
+              href="#about" 
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-foreground hover:text-neon-secondary transition-colors cursor-pointer"
+            >
+              About Us
+            </a>
+            <a 
+              href="#what-we-offer" 
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('what-we-offer')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-foreground hover:text-neon-accent transition-colors cursor-pointer"
+            >
+              What We Offer
+            </a>
+            <a 
+              href="#features" 
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-foreground hover:text-neon-primary transition-colors cursor-pointer"
+            >
+              Features
+            </a>
+            <a 
+              href="#pricing" 
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-foreground hover:text-neon-secondary transition-colors cursor-pointer"
             >
               Pricing
-            </Link>
-            <Link 
-              to="/#community" 
-              className="text-foreground hover:text-neon-accent transition-colors"
-            >
-              Community
-            </Link>
-            <Link 
-              to="/#faq" 
-              className="text-foreground hover:text-neon-primary transition-colors"
-            >
-              FAQ
-            </Link>
+            </a>
           </div>
 
           {/* Auth Buttons */}
