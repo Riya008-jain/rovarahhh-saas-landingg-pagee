@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from './ui/button';
-import { X, MessageCircle, Send, Bot, Sparkles } from 'lucide-react';
+import { X, MessageCircle, Send, Bot, Sparkles, ArrowLeft } from 'lucide-react';
 import { Card } from './ui/card';
 import { Input } from './ui/input';
 import { ScrollArea } from './ui/scroll-area';
@@ -183,14 +183,25 @@ const AIAssistant = () => {
                     <p className="text-xs text-muted-foreground">Your Gaming Guide</p>
                   </div>
                 </div>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => setIsOpen(false)}
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  <X className="w-5 h-5" />
-                </Button>
+                <div className="flex items-center gap-2">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setIsOpen(false)}
+                    className="text-muted-foreground hover:text-foreground flex items-center gap-1"
+                  >
+                    <ArrowLeft className="w-4 h-4" />
+                    <span className="text-xs">Back</span>
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => setIsOpen(false)}
+                    className="text-muted-foreground hover:text-destructive"
+                  >
+                    <X className="w-4 h-4" />
+                  </Button>
+                </div>
               </div>
 
               {/* Quick Actions */}
