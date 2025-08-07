@@ -9,6 +9,7 @@ import PricingSection from "@/components/PricingSection";
 import FAQSection from "@/components/FAQSection";
 import CommunitySection from "@/components/CommunitySection";
 import CTASection from "@/components/CTASection";
+import ContactSection from "@/components/ContactSection";
 import ParallaxBackground from "@/components/ParallaxBackground";
 import MusicToggle from "@/components/MusicToggle";
 import AIAssistant from "@/components/AIAssistant";
@@ -30,6 +31,7 @@ const Index = () => {
         <EmailSection />
         <PricingSection />
         <FAQSection />
+        <ContactSection />
         <CommunitySection />
         <CTASection />
       </div>

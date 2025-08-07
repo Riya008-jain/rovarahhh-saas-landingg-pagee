@@ -147,7 +147,11 @@ const Signup = () => {
             <div className="mt-4 text-center">
               <Link 
                 to="/" 
-                className="text-sm text-muted-foreground hover:text-neon-accent transition-colors"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = '/';
+                }}
               >
                 ← Back to Home
               </Link>

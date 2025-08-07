@@ -79,9 +79,19 @@ const Navbar = () => {
                 e.preventDefault();
                 document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="text-foreground hover:text-neon-secondary transition-colors cursor-pointer"
+              className="text-foreground hover:text-primary transition-colors cursor-pointer"
             >
               Pricing
+            </a>
+            <a 
+              href="#contact" 
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-foreground hover:text-primary transition-colors cursor-pointer"
+            >
+              Contact Us
             </a>
           </div>
 

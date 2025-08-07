@@ -8,30 +8,30 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Cyberpunk Neon Gaming Theme */
-    --background: 0 0% 5%;
-    --foreground: 0 0% 100%;
+    /* Clean Gaming Theme - Dark Charcoal Background */
+    --background: 210 10% 7%;  /* #121212 */
+    --foreground: 0 0% 100%;   /* #FFFFFF */
 
-    --card: 0 0% 8%;
+    --card: 210 10% 10%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 8%;
+    --popover: 210 10% 10%;
     --popover-foreground: 0 0% 100%;
 
-    /* Neon Blue Primary */
-    --primary: 190 100% 50%;
-    --primary-foreground: 0 0% 5%;
-    --primary-glow: 190 100% 60%;
+    /* Steel Blue Primary */
+    --primary: 206 69% 60%;     /* #4A90E2 */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 206 69% 70%;
 
-    /* Neon Pink Secondary */
-    --secondary: 320 100% 50%;
+    /* Complementary Steel Blue Secondary */
+    --secondary: 206 69% 50%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-glow: 320 100% 60%;
+    --secondary-glow: 206 69% 60%;
 
-    /* Deep Purple Accent */
-    --accent: 250 60% 25%;
+    /* Darker Steel Blue Accent */
+    --accent: 206 50% 30%;
     --accent-foreground: 0 0% 100%;
-    --accent-glow: 250 80% 35%;
+    --accent-glow: 206 60% 40%;
 
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 90%;
@@ -45,20 +45,20 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
-    /* Cyberpunk Neon Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(190 100% 50%), hsl(210 100% 60%));
-    --gradient-secondary: linear-gradient(135deg, hsl(320 100% 50%), hsl(340 100% 60%));
-    --gradient-accent: linear-gradient(135deg, hsl(250 60% 25%), hsl(270 80% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 5%) 0%, hsl(190 100% 50%) 30%, hsl(320 100% 50%) 70%, hsl(0 0% 5%) 100%);
-    --gradient-dark: linear-gradient(180deg, hsl(0 0% 5%), hsl(250 30% 8%));
+    /* Clean Gaming Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(206 69% 60%), hsl(206 69% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(206 69% 50%), hsl(206 69% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(206 50% 30%), hsl(206 60% 40%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 10% 7%) 0%, hsl(206 69% 60%) 50%, hsl(210 10% 7%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(210 10% 7%), hsl(210 10% 10%));
     
-    /* Neon Glows */
-    --shadow-primary: 0 0 30px hsl(190 100% 50% / 0.7);
-    --shadow-secondary: 0 0 30px hsl(320 100% 50% / 0.7);
-    --shadow-accent: 0 0 25px hsl(250 80% 35% / 0.5);
-    --glow-primary: 0 0 60px hsl(190 100% 50% / 0.8);
-    --glow-secondary: 0 0 60px hsl(320 100% 50% / 0.8);
-    --glow-accent: 0 0 40px hsl(250 80% 35% / 0.6);
+    /* Subtle Glows */
+    --shadow-primary: 0 0 20px hsl(206 69% 60% / 0.4);
+    --shadow-secondary: 0 0 20px hsl(206 69% 50% / 0.4);
+    --shadow-accent: 0 0 15px hsl(206 60% 40% / 0.3);
+    --glow-primary: 0 0 40px hsl(206 69% 60% / 0.5);
+    --glow-secondary: 0 0 40px hsl(206 69% 50% / 0.5);
+    --glow-accent: 0 0 30px hsl(206 60% 40% / 0.4);
 
     /* Optimized Smooth Animations */
     --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);

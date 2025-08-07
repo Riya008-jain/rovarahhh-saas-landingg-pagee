@@ -27,10 +27,14 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-2xl md:text-4xl font-light mb-2 text-white"
+                className="text-2xl md:text-4xl font-light mb-4 text-white"
+                style={{
+                  textShadow: '0 0 10px rgba(255,255,255,0.8), 0 2px 4px rgba(0,0,0,0.8)',
+                  color: '#FFFFFF'
+                }}
               >
                 <motion.span 
-                  className="text-6xl md:text-8xl mr-4"
+                  className="text-4xl md:text-6xl mr-4"
                   animate={{ 
                     rotate: [0, 10, -10, 0],
                     scale: [1, 1.1, 1]
@@ -39,19 +43,40 @@ const HeroSection = () => {
                 >
                   🚀
                 </motion.span>
-                Welcome to
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.8 }}
+                >
+                  Welcome to
+                </motion.span>
               </motion.div>
               <motion.h1
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="text-6xl md:text-8xl lg:text-9xl font-black tracking-widest text-neon-primary leading-none"
+                className="text-6xl md:text-8xl lg:text-9xl font-black tracking-widest leading-none mb-6"
                 style={{
-                  textShadow: '0 0 30px hsl(var(--primary)), 0 0 60px hsl(var(--primary) / 0.8), 0 0 90px hsl(var(--primary) / 0.6)',
-                  animation: 'pulse-text 2s ease-in-out infinite'
+                  background: 'linear-gradient(135deg, hsl(206 69% 60%), hsl(206 69% 80%))',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  textShadow: '0 0 30px hsl(206 69% 60% / 0.5)'
                 }}
               >
-                ROVARAH
+                {['R', 'O', 'V', 'A', 'R', 'A', 'H'].map((letter, i) => (
+                  <motion.span
+                    key={i}
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ 
+                      duration: 0.6, 
+                      delay: 0.5 + i * 0.1,
+                      type: "spring",
+                      bounce: 0.4
+                    }}
+                    className="inline-block"
+                  >
+                    {letter}
+                  </motion.span>
+                ))}
               </motion.h1>
             </div>
 
@@ -102,77 +127,64 @@ const HeroSection = () => {
             )}
           </div>
 
-          {/* Right Column - 3D Model */}
+          {/* Right Column - Clean Animation */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="relative h-96 md:h-[500px] lg:h-[600px]"
+            className="relative h-96 md:h-[500px] lg:h-[600px] flex items-center justify-center"
           >
-            <div className="absolute inset-0 bg-gradient-primary rounded-2xl opacity-30 blur-3xl animate-pulse-neon" />
-            <div className="relative h-full rounded-2xl overflow-hidden border-2 border-primary/50">
-              {/* Crazy Gaming 3D Model */}
-              <div className="w-full h-full flex items-center justify-center bg-card/20 backdrop-blur-sm rounded-2xl border border-primary/30 relative overflow-hidden">
+            <motion.div
+              animate={{ 
+                rotateY: [0, 360],
+                scale: [1, 1.1, 1]
+              }}
+              transition={{ 
+                rotateY: { duration: 10, repeat: Infinity, ease: "linear" },
+                scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+              }}
+              className="w-48 h-48 md:w-64 md:h-64 bg-gradient-primary rounded-full flex items-center justify-center text-6xl md:text-8xl relative"
+              style={{ 
+                transformStyle: 'preserve-3d',
+                boxShadow: '0 0 50px hsl(206 69% 60% / 0.4)'
+              }}
+            >
+              <motion.div
+                animate={{
+                  filter: [
+                    "drop-shadow(0 0 20px hsl(206 69% 60%))",
+                    "drop-shadow(0 0 30px hsl(206 69% 70%))",
+                    "drop-shadow(0 0 20px hsl(206 69% 60%))"
+                  ]
+                }}
+                transition={{ duration: 3, repeat: Infinity }}
+              >
+                🎮
+              </motion.div>
+            </motion.div>
+            
+            {/* Clean floating particles */}
+            <div className="absolute inset-0 pointer-events-none">
+              {[...Array(6)].map((_, i) => (
                 <motion.div
-                  animate={{ 
-                    rotateY: [0, 360],
-                    rotateX: [0, 15, -15, 0],
-                    scale: [1, 1.2, 0.9, 1.1, 1]
+                  key={i}
+                  className="absolute w-1 h-1 bg-primary rounded-full opacity-60"
+                  style={{
+                    left: `${25 + i * 12}%`,
+                    top: `${35 + i * 8}%`,
                   }}
-                  transition={{ 
-                    rotateY: { duration: 8, repeat: Infinity, ease: "linear" },
-                    rotateX: { duration: 6, repeat: Infinity, ease: "easeInOut" },
-                    scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+                  animate={{
+                    y: [-15, 15, -15],
+                    opacity: [0.3, 0.8, 0.3],
+                    scale: [0.5, 1, 0.5]
                   }}
-                  className="w-32 h-32 md:w-48 md:h-48 bg-gradient-hero rounded-full flex items-center justify-center text-6xl md:text-8xl animate-crazy-bounce relative"
-                  style={{ transformStyle: 'preserve-3d' }}
-                >
-                  <motion.div
-                    animate={{
-                      filter: [
-                        "drop-shadow(0 0 20px rgb(0 100 255))",
-                        "drop-shadow(0 0 40px rgb(255 0 0))",
-                        "drop-shadow(0 0 30px rgb(0 100 255))"
-                      ]
-                    }}
-                    transition={{ duration: 3, repeat: Infinity }}
-                  >
-                    🎮
-                  </motion.div>
-                </motion.div>
-                
-                {/* Floating particles */}
-                <div className="absolute inset-0 pointer-events-none">
-                  {[...Array(8)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      className="absolute w-2 h-2 bg-primary rounded-full"
-                      style={{
-                        left: `${20 + i * 10}%`,
-                        top: `${30 + i * 5}%`,
-                      }}
-                      animate={{
-                        y: [-20, 20, -20],
-                        opacity: [0.3, 1, 0.3],
-                        scale: [0.5, 1.5, 0.5]
-                      }}
-                      transition={{
-                        duration: 3 + i * 0.5,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                      }}
-                    />
-                  ))}
-                </div>
-              </div>
-              
-              {/* Uncomment below to use actual Spline model */}
-              {/* 
-              <Spline
-                scene="https://prod.spline.design/your-spline-model-url"
-                className="w-full h-full"
-              />
-              */}
+                  transition={{
+                    duration: 2 + i * 0.3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
+              ))}
             </div>
           </motion.div>
         </div>
