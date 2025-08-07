@@ -187,11 +187,11 @@ const AIAssistant = () => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => window.location.href = '/'}
                     className="text-muted-foreground hover:text-foreground flex items-center gap-1"
                   >
                     <ArrowLeft className="w-4 h-4" />
-                    <span className="text-xs">Back</span>
+                    <span className="text-xs">Home</span>
                   </Button>
                   <Button
                     variant="ghost"

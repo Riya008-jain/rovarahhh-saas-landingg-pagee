@@ -22,40 +22,38 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-8">
-            <motion.h1
-              initial={{ opacity: 0, y: 50, rotateX: 90 }}
-              animate={{ opacity: 1, y: 0, rotateX: 0 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight"
-            >
-              <motion.span 
-                className="text-neon-primary text-6xl md:text-8xl"
-                animate={{ 
-                  rotate: [0, 10, -10, 0],
-                  scale: [1, 1.1, 1]
-                }}
-                transition={{ duration: 2, repeat: Infinity }}
+            <div className="mb-6">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-2xl md:text-4xl font-light mb-2 text-white"
               >
-                🚀
-              </motion.span>{' '}
-              <span className="text-white text-4xl md:text-6xl font-bold drop-shadow-lg">
+                <motion.span 
+                  className="text-6xl md:text-8xl mr-4"
+                  animate={{ 
+                    rotate: [0, 10, -10, 0],
+                    scale: [1, 1.1, 1]
+                  }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  🚀
+                </motion.span>
                 Welcome to
-              </span>
-              <br />
-              <motion.span 
-                className="text-neon-secondary"
-                animate={{ 
-                  textShadow: [
-                    "0 0 20px rgb(255 0 0 / 0.8)",
-                    "0 0 40px rgb(255 0 0 / 1)",
-                    "0 0 20px rgb(255 0 0 / 0.8)"
-                  ]
+              </motion.div>
+              <motion.h1
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                className="text-6xl md:text-8xl lg:text-9xl font-black tracking-widest text-neon-primary leading-none"
+                style={{
+                  textShadow: '0 0 30px hsl(var(--primary)), 0 0 60px hsl(var(--primary) / 0.8), 0 0 90px hsl(var(--primary) / 0.6)',
+                  animation: 'pulse-text 2s ease-in-out infinite'
                 }}
-                transition={{ duration: 2, repeat: Infinity }}
               >
-                Rovarah
-              </motion.span>
-            </motion.h1>
+                ROVARAH
+              </motion.h1>
+            </div>
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}

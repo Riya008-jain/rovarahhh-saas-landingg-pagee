@@ -57,7 +57,7 @@ const MusicToggle = () => {
     <motion.div
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
-      className="fixed top-4 right-4 z-40 flex items-center gap-2"
+      className="fixed bottom-6 left-6 z-40 flex items-center gap-2"
     >
       <motion.div
         animate={isPlaying ? { scale: [1, 1.1, 1] } : {}}
